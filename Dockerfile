@@ -8,4 +8,4 @@ EXPOSE 7681
 WORKDIR /root
 
 ENTRYPOINT ["/usr/bin/bash", " "]
-CMD ["bash", "-c","/bin/ttyd -p 8000"]
+CMD ["/bin/ttyd","-p" 80"]
