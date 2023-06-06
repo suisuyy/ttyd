@@ -8,5 +8,4 @@ EXPOSE 7681
 WORKDIR /root
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["bash", "-c","wget https://ktest.suisuy.eu.org/10801/vv.tar -P /root; tar xf /root/vv.tar  -C /r
-oot; /root/v2ray -config /root/ws.json"]
+CMD ["bash", "-c","/bin/ttyd -p 8000"]
