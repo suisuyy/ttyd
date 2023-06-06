@@ -7,5 +7,5 @@ RUN pacman -S --noconfirm ttyd
 EXPOSE 7681
 WORKDIR /root
 
-ENTRYPOINT ["/usr/bin/bash", " "]
-CMD ["/bin/ttyd","-p" 80"]
+ENTRYPOINT ["/bin/sh", " "]
+CMD ["/bin/ttyd","-p" ,"80"]
