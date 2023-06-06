@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ARG TARGETARCH
-RUN apt-get -y update && apt-get install -y  tini ttyd 
+RUN apt-get -y update && apt-get install -y  ttyd 
 
 EXPOSE 7681
 WORKDIR /root
