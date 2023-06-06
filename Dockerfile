@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 ARG TARGETARCH
 RUN pacman -Sy 
-RUN pacman -S ttyd 
+RUN pacman -S --noconfirm ttyd 
 
 EXPOSE 7681
 WORKDIR /root
