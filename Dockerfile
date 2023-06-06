@@ -1,7 +1,7 @@
-FROM ubuntu:20.04
+FROM archlinux:latest
 
 ARG TARGETARCH
-RUN apt-get -y update && apt-get install -y  ttyd 
+RUN pacman -Sy && pacman -S ttyd 
 
 EXPOSE 7681
 WORKDIR /root
