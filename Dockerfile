@@ -1,11 +1,10 @@
 FROM ubuntu:20.04
 
 ARG TARGETARCH
-COPY ./dist/* /root
-RUN apt-get update && apt-get install -y --no-install-recommends tini ttyd && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y update && apt-get install -y  tini ttyd 
 
 EXPOSE 7681
 WORKDIR /root
 
-ENTRYPOINT ["/usr/bin/tini", "--"]
+ENTRYPOINT ["/usr/bin/bash", " "]
 CMD ["bash", "-c","/bin/ttyd -p 8000"]
